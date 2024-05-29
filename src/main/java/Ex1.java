@@ -6,7 +6,14 @@ public class Ex1 {
 
     // 1-1
     public static String compareTo10 (int value) {
-        return "less than 10";
+        if(value < 10){
+            return "less than 10";
+        }else if(value >=10){
+            return "over or equal to 10";
+        }else{
+            return "error!";
+        }
+       
     }
 
     // 1-2
