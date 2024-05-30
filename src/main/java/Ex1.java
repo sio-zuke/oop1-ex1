@@ -19,7 +19,9 @@ public class Ex1 {
     // 1-2
     public static List<Integer> assign1toN (int N) {
         var list = new ArrayList<Integer>();
-        // add here
+        for(int i=0;i<N;i++){
+            list.add(i+1);
+        }
         return list;
     }
 
