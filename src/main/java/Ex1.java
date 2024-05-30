@@ -145,13 +145,26 @@ public class Ex1 {
 
     // 1-11
     public static int daysOfMonth (int year, int month) {
-        return 31;
+        if(month == 4 || month == 6 || month == 9 || month == 11) return 30;
+        else if(month == 2 && isLeapYear(year))return 29;
+        else if(month == 2)return 28;
+        else return 31;
     }
 
     // 1-12
     public static List<Integer> perpetualCalendar (int year, int month) {
         var list = new ArrayList<Integer>();
-        // add here
+        int days = daysOfMonth(year,month),day = 1,week =0;
+        while (days>0){
+            for(week = 0;week<7;week++){
+                if(dayOfWeek(year,month,day) == week){
+                    list.add(day);
+                    day++;
+                    days--;
+                } 
+                else list.add(0);
+            }   
+        }
         return list;
     }
 
