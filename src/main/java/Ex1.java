@@ -28,7 +28,9 @@ public class Ex1 {
     // 1-3
     public static List<Integer> assign1toNofEven (int N) {
         var list = new ArrayList<Integer>();
-        // add here
+        for(int i=2;i<=N;i+=2){
+            list.add(i);
+        }
         return list;
     }
 
