@@ -171,9 +171,16 @@ public class Ex1 {
     // 1-o1
     public static void histogramOf0to9 () {
         Random rand = new Random();
-
-        rand.nextInt(10); // you can get a random number between 0 to 9
-    }
+        int[] p = new int[10];
+        int n =0,i;
+        for(i=0;i<100;i++){
+        n = rand.nextInt(10); // you can get a random number between 0 to 9
+        p[n]++;
+        }
+        for(i=0;i<p.length;i++){
+            System.out.format("%d:%d\n",i,p[i]);
+        }
+    }    
 
     // 1-o2
     public static void numberToComplete () {
@@ -274,5 +281,10 @@ public class Ex1 {
                 }
             }
         }
+        // 1-o1
+        System.out.println("\nEx1-o1 ============");
+        histogramOf0to9();
+        // 1-o2
+        System.out.println("\nEx1-o2 ============");
     }
 }
