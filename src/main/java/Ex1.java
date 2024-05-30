@@ -115,7 +115,11 @@ public class Ex1 {
     // 1-8
     public static List<Integer> table9x9() {
         var list = new ArrayList<Integer>();
-        // add here
+        for(int i=1;i<=9;i++){
+            for(int j=1;j<=9;j++){
+                list.add(i*j);
+            }
+        }
         return list;
     }
 
