@@ -96,7 +96,11 @@ public class Ex1 {
 
     // 1-6
     public static int total (List<Integer> list) {
-        return 0;
+        int sum = 0;
+        for(int i:list){
+            sum += i;
+        }
+        return sum;
     }
 
     // 1-7
