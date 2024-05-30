@@ -184,6 +184,17 @@ public class Ex1 {
 
     // 1-o2
     public static void numberToComplete () {
+        Random rand = new Random();
+        int n =0,i=0,ave=0;
+        for(i=0;i<100;i++){
+            int[] p = new int[10];
+            while((p[0]*p[1]*p[2]*p[3]*p[4]*p[5]*p[6]*p[7]*p[8]*p[9])==0){
+                n = rand.nextInt(10); // you can get a random number between 0 to 9
+                p[n]++;
+                ave++;
+            }
+        }
+        System.out.format("average:%d\n",ave/100);
     }
 
     public static void main (String[] args) {
@@ -286,5 +297,6 @@ public class Ex1 {
         histogramOf0to9();
         // 1-o2
         System.out.println("\nEx1-o2 ============");
+        numberToComplete();
     }
 }
