@@ -134,7 +134,13 @@ public class Ex1 {
 
     // 1-10
     public static boolean isLeapYear (int year) {
-        return false;
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+              if (year % 400 == 0) return true;
+                else return false;
+            } else return true;
+          } else return false;
+
     }
 
     // 1-11
