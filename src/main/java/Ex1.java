@@ -125,7 +125,11 @@ public class Ex1 {
 
     // 1-9
     public static int dayOfWeek (int year, int month, int day) {
-        return 0;
+        if(month<3){
+            month +=12;
+            year -=1;
+        }
+        return (year+year/4-year/100+year/400+(13*month+8)/5+day)%7;
     }
 
     // 1-10
