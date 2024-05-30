@@ -105,7 +105,11 @@ public class Ex1 {
 
     // 1-7
     public static double average (List<Integer> list) {
-        return 0;
+        int ave = 0;
+        for(int i:list){
+            ave += i;
+        }
+        return (double)ave/list.size();
     }
 
     // 1-8
